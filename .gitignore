@@ -35,4 +35,4 @@ terraform.rc
 
 # for eduardos machine
 /bin/*
-
+kubeconfig_gitlab*
