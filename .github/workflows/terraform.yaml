@@ -1,4 +1,4 @@
-name: Example installing Terraform
+name: Setting up IAC
 
 on:
   push:
@@ -8,13 +8,6 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
     - uses: actions/checkout@v1
 
