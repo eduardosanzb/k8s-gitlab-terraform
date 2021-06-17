@@ -10,7 +10,7 @@ locals {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.66.0"
+  version = "3.1.0"
 
   name                 = "gitlab-poc-vpc"
   cidr                 = "10.0.0.0/16"
@@ -23,6 +23,9 @@ module "vpc" {
 
   tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
+    GithubRepo  = "gitlab_poc"
+    GithubOrg   = "Design-and-Engineering"
+    Environment = "development"
   }
 
   public_subnet_tags = {
