@@ -6,12 +6,16 @@ on:
   pull_request:
     branches: [ master ]
 
+resources:
+  containers:
+    - container: terraform
+      image: mcr.microsoft.com/terraform-test
 jobs:
   build:
     runs-on: [self-hosted]
+    using: 'terraform'
     steps:
     - uses: actions/checkout@v1
-    - uses: Design-and-Engineering/setup-terraform
 
     # - name: Install Terraform
     #   uses: little-core-labs/install-terraform@v2.0.0
