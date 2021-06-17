@@ -9,6 +9,7 @@ on:
 resources:
   containers:
     - container: terraform
+      runs-on: [self-hosted]
       image: mcr.microsoft.com/terraform-test
 jobs:
   build:
